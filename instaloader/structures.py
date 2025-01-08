@@ -601,6 +601,14 @@ class Post:
         if self.is_video:
             return self._field('video_view_count')
         return None
+    
+    @property
+    def video_play_count(self) -> Optional[int]:
+        """View count of the video, or None. """
+        
+        if self.is_video:
+            return self._field('video_play_count')
+        return None
 
     @property
     def video_duration(self) -> Optional[float]:
